@@ -1,0 +1,454 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Jost', sans-serif;
+}
+
+a{
+    color: inherit;
+}
+
+h1, h2{
+    font-family: 'Raleway', sans-serif;
+    color: #a5be00;
+    font-weight: 400;
+}
+
+.details h3{
+    color: darkslategrey;
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+/* navigation */
+nav{
+    text-align: right;
+    background-color: lightslategray;
+    position: fixed;
+}
+
+nav li{
+    text-decoration: none;
+    list-style-type: none;
+    color: black;
+}
+
+nav li:hover{
+    border-bottom: #4831d4 5px solid;
+    background-color: #141414;
+    color: whitesmoke;
+}
+
+/* main content - right side */
+
+#right-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content{
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    min-height: 100vh;
+    display: flex;
+    background-color: whitesmoke;
+}
+
+/* home */
+
+#home section{
+    flex-basis: 50%;
+    font-size: 24px;  
+}
+
+#home img{
+    border-radius: 50%;
+}
+
+/* about */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2%;
+}
+
+#about section{
+    width: 100%;
+    margin: 2% 0;
+}
+
+/* work and education */
+
+.card{
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: white;
+    border-radius: 1em;
+    margin-bottom: 2%;
+    padding: 2%;
+}
+
+.position{
+    font-weight: bold;
+    color: #a5be00;
+}
+
+.work-exp{
+    margin-right: 2%;
+}
+
+.institution,
+.duration,
+.company{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 1%;
+    color: darkslategrey;
+}
+
+img{
+    width: 20%;
+    height: 100%;
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* projects */
+
+#samples {
+    display: flex;
+    flex-direction: column;
+}
+
+#samples h2{
+    margin-bottom: 36px;
+}
+
+#samples h3{
+    margin-bottom: 36px;
+    font-weight: bold;
+}
+
+.thumbnail-cont{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.thumbnails{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.dev-proj, .writing-proj {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 30px
+}
+
+.box{
+    width: 150px;
+    height: 150px;
+    background-color: lightslategray;
+    text-align: center;
+    margin-bottom: 16px;
+    /* padding: 10% 0; */
+    color: lightslategray;
+}
+
+/* #samples img:hover{
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    background-color: red;
+} */
+
+#samples .box:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #4831d4;
+    color: white;
+    font-weight: bold;
+}
+
+.more-btn{
+    border: 1px solid lightslategray;
+    padding: 10px;
+}
+
+.more-btn:hover{
+    border: 1px solid white;
+    background-color: #a5be00;
+    color: whitesmoke;
+}
+
+#links,
+.link-list{
+    display: flex;
+}
+
+#links{
+    flex-direction: column;
+}
+
+.link-list i{
+    /* flex-basis: 20%; */
+    font-size: 24px;
+    color: darkslategray;
+}
+
+.link-list i:hover{
+    /* background-color: #a5be00; */
+    color: #4831d4;
+}
+
+
+footer{
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 1% 0%;
+}
+
+
+@media only screen and (min-width: 275px) {
+
+    h1, header {
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+/* navigation */
+
+    nav{
+        text-align: center;
+        height: 8%;
+        top: 0;
+        width: 100%;
+    }
+    
+    nav ul{
+        margin-top: 5%;
+    }
+
+    nav img{
+        width: 15px;
+        height: 15px;
+        margin: 0;
+    }
+    
+    nav li{
+        text-decoration: none;
+        padding: 10px;
+        margin: 5% 0;
+        color: black;
+        display: inline;
+    }
+
+/* main content container */
+
+    #right-container {
+        display: flex;
+        margin-left: 0;
+        width: 100vw;
+    }
+
+    #home{
+        flex-direction: column;
+    }
+
+    #home img{
+        width: 160px;
+        margin: 5% 0;
+    }
+
+/* work and education */
+
+    .top-half{
+        flex-direction: column;
+    }
+
+    .details h3{
+        text-align: center;
+    }
+
+    .thumbnail-cont{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* .thumbnail-cont .box{
+        padding: 30% 0;
+    } */
+
+/* projects */
+
+    .box{
+        width: 100px;
+        height: 100px;
+    }
+
+/* links/socials */
+
+    #links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link-list{
+        flex-direction: row;
+        margin-top: 2%;
+    }
+
+    .link-list i{
+        width: 60px;
+        height: 60px;
+        text-align: center;
+    }
+
+}
+
+@media only screen and (min-width: 800px){
+    body{
+        font-size: 18px;
+    }
+
+    h1, header {
+        font-size: 60px;
+        font-weight: 400;
+    }
+
+    h2{
+        font-size: 35px;
+        font-weight: 400;
+    }
+
+
+/* navigation */
+
+    nav{
+        text-align: right;
+        width: 15%;
+        height: 100vh;
+        left: 0;
+        font-size: 24px;
+    }
+
+    nav img{
+        width: 18px;
+        height: 18px;
+        margin: 0;
+    }
+    
+    nav ul{
+        margin-top: 10vh;
+    }
+    
+    nav li{
+        font-size: 24px;
+        margin: 15% 2%;
+        color: black;
+        gap: 25%;
+        display: block;
+    }
+
+/* home/about */
+
+    #right-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15%;
+        width: 85%;
+    }
+
+    #home{
+        flex-direction: row;
+    }
+
+    #home img{
+        width: 240px;
+        margin: 0 5%;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+/* work and education */
+
+    .details h3{
+        text-align: left;
+    }
+
+    .skills ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .top-half{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+/* projects */
+
+    .thumbnail-cont{
+        flex-direction: row;
+        margin-top: 2%;
+        gap: 2%;
+    }
+
+    .dev-proj, .writing-proj{
+        flex-wrap: wrap;
+        width: 100%;
+        color: lightslategray
+    }
+
+/* links/socials */
+
+    .link-list{
+        flex-direction: row;
+        /* background-color: red; */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .link-list span{
+        flex-basis: 20%;
+        background-color: whitesmoke;
+    } */
+
+    /* .link-list span:hover{
+        background-color: #a5be00;
+        color: whitesmoke;
+    } */
+
+    .link-list span{
+        padding: 6%;
+        background-color: whitesmoke;
+    }
+
+    footer{
+        margin-left: 15%;
+        width: 85%;
+        font-size: 18px;
+    }
+}
