@@ -151,7 +151,7 @@ nav li:hover{
 .institution,
 .duration,
 .company{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 1%;
     color: darkslategrey;
@@ -393,11 +393,11 @@ footer{
     }
 
     #home section{
-        font-size: 32px;;
+        font-size: 30px;
     }
 
     h2{
-        font-size: 35px;
+        font-size: 32px;
         font-weight: 400;
     }
 
@@ -419,7 +419,7 @@ footer{
     }
     
     nav li{
-        font-size: 16px;
+        font-size: 18px;
         padding: 0 2%;
         color: white;
     }
