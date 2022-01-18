@@ -28,23 +28,47 @@ h1, h2{
     margin-bottom: 2%;
 }
 
+.main-container{
+    display: flex;
+    flex-direction: column;
+}
+
 /* navigation */
 nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     text-align: right;
-    background-color: lightslategray;
+    background-color: #1e1e2f;
+    width: 100%;
     position: fixed;
+    padding: 15px 0;
+}
+
+nav h2{
+    margin: 0;
+    text-align: center;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
 }
 
 nav li{
     text-decoration: none;
     list-style-type: none;
-    color: black;
+    color: white;
+    display: inline;
+    flex-basis: 2;
 }
 
 nav li:hover{
     border-bottom: #4831d4 5px solid;
-    background-color: #141414;
-    color: whitesmoke;
+    /* background-color: #141414; */
+    color: #4831d4;
 }
 
 /* main content - right side */
@@ -52,6 +76,7 @@ nav li:hover{
 #right-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .content{
@@ -59,11 +84,20 @@ nav li:hover{
     align-items: center;
     padding: 0 10%;
     min-height: 100vh;
+    width: 100%;
     display: flex;
     background-color: whitesmoke;
 }
 
 /* home */
+#home{
+    display: flex;
+    flex-direction: column;
+}
+
+.home-content{
+    display: flex;
+}
 
 #home section{
     flex-basis: 50%;
@@ -106,10 +140,18 @@ nav li:hover{
     margin-right: 2%;
 }
 
+.details h3{
+    font-size: 21px;
+}
+
+.details p, .details li {
+    font-size: 24px;
+}
+
 .institution,
 .duration,
 .company{
-    font-size: 15px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 1%;
     color: darkslategrey;
@@ -123,6 +165,10 @@ img{
 
 a{
     text-decoration: none;
+}
+
+a:hover{
+    color: #4831d4;
 }
 
 /* projects */
@@ -143,16 +189,21 @@ a{
 
 .thumbnail-cont{
     display: flex;
-    flex-direction: column;
-    width: 100%;
 }
 
-.thumbnails{
+.thumbnail-cont h2{
+    color: black;
+}
+
+.sample {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    column-gap: 10px;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.sample img{
+    width: 150px;
+    height: 150px;
 }
 
 .dev-proj, .writing-proj {
@@ -161,7 +212,9 @@ a{
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
-    margin-bottom: 30px
+    padding: 20px;
+    margin-bottom: 30px;
+    flex-basis: 50%;
 }
 
 .box{
@@ -173,11 +226,6 @@ a{
     /* padding: 10% 0; */
     color: lightslategray;
 }
-
-/* #samples img:hover{
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
-    background-color: red;
-} */
 
 #samples .box:hover{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -193,23 +241,31 @@ a{
 
 .more-btn:hover{
     border: 1px solid white;
-    background-color: #a5be00;
+    background-color: #4831d4;
     color: whitesmoke;
 }
 
 #links,
 .link-list{
     display: flex;
+    /* background-color: darkslategray; */
 }
 
 #links{
     flex-direction: column;
 }
 
+.link-list{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 25px;
+}
+
 .link-list i{
-    /* flex-basis: 20%; */
-    font-size: 24px;
+    font-size: 45px;
     color: darkslategray;
+    margin: 0 35px;
 }
 
 .link-list i:hover{
@@ -225,7 +281,7 @@ footer{
 }
 
 
-@media only screen and (min-width: 275px) {
+@media only screen and (min-width: 275px) and (max-width: 799px) {
 
     h1, header {
         font-size: 36px;
@@ -239,24 +295,19 @@ footer{
         height: 8%;
         top: 0;
         width: 100%;
-    }
-    
-    nav ul{
-        margin-top: 5%;
+        justify-content: center;
     }
 
-    nav img{
-        width: 15px;
-        height: 15px;
-        margin: 0;
+    nav ul{
+        justify-content: space-between;
+        align-items: center;
     }
     
     nav li{
         text-decoration: none;
         padding: 10px;
         margin: 5% 0;
-        color: black;
-        display: inline;
+        color: white;
     }
 
 /* main content container */
@@ -302,6 +353,13 @@ footer{
         height: 100px;
     }
 
+    .sample {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 /* links/socials */
 
     #links{
@@ -317,9 +375,9 @@ footer{
     }
 
     .link-list i{
-        width: 60px;
-        height: 60px;
-        text-align: center;
+        font-size: 35px;
+        color: darkslategray;
+        margin: 0 15px;
     }
 
 }
@@ -330,8 +388,12 @@ footer{
     }
 
     h1, header {
-        font-size: 60px;
+        font-size: 80px;
         font-weight: 400;
+    }
+
+    #home section{
+        font-size: 32px;;
     }
 
     h2{
@@ -344,28 +406,22 @@ footer{
 
     nav{
         text-align: right;
-        width: 15%;
-        height: 100vh;
-        left: 0;
+        width: 100%;
+        /* height: 100vh; */
+        /* left: 0; */
         font-size: 24px;
+        align-items: center;
     }
 
-    nav img{
-        width: 18px;
-        height: 18px;
-        margin: 0;
-    }
-    
     nav ul{
-        margin-top: 10vh;
+        justify-content: space-around;
+        align-items: center;
     }
     
     nav li{
         font-size: 24px;
-        margin: 15% 2%;
-        color: black;
-        gap: 25%;
-        display: block;
+        padding: 0 2%;
+        color: white;
     }
 
 /* home/about */
@@ -373,8 +429,7 @@ footer{
     #right-container {
         display: flex;
         flex-direction: column;
-        margin-left: 15%;
-        width: 85%;
+        width: 100vw;
     }
 
     #home{
@@ -431,24 +486,14 @@ footer{
         align-items: center;
     }
 
-    /* .link-list span{
-        flex-basis: 20%;
-        background-color: whitesmoke;
-    } */
-
-    /* .link-list span:hover{
-        background-color: #a5be00;
-        color: whitesmoke;
-    } */
-
     .link-list span{
         padding: 6%;
         background-color: whitesmoke;
     }
 
     footer{
-        margin-left: 15%;
-        width: 85%;
+        /* margin-left: 15%; */
+        width: 100%;
         font-size: 18px;
     }
 }
