@@ -93,6 +93,7 @@ nav li:hover{
 #home{
     display: flex;
     flex-direction: column;
+    font-size: 30px;
 }
 
 .home-content{
@@ -106,10 +107,6 @@ nav li:hover{
 
 #home img{
     border-radius: 50%;
-}
-
-#home a{
-    font-size: 24px;
 }
 
 /* about */
@@ -177,6 +174,7 @@ a:hover{
 
 #about .fab{
     font-size: 52px;
+    color: #3a424f;
 }
 
 
@@ -266,6 +264,7 @@ a:hover{
 
 .proj-skills .fab{
     font-size: 32px;
+    color: #3a424f;
 }
 
 
