@@ -39,7 +39,7 @@ nav{
     flex-direction: row;
     justify-content: center;
     text-align: right;
-    background-color: #1e1e2f;
+    background-color: #3a424f;
     width: 100%;
     position: fixed;
     padding: 15px 0;
@@ -66,9 +66,9 @@ nav li{
 }
 
 nav li:hover{
-    border-bottom: #4831d4 5px solid;
+    border-bottom: #a5be00 5px solid;
     /* background-color: #141414; */
-    color: #4831d4;
+    color: #a5be00;
 }
 
 /* main content - right side */
@@ -108,6 +108,10 @@ nav li:hover{
     border-radius: 50%;
 }
 
+#home a{
+    font-size: 24px;
+}
+
 /* about */
 
 #about {
@@ -145,7 +149,7 @@ nav li:hover{
 }
 
 .details p, .details li {
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .institution,
@@ -171,6 +175,11 @@ a:hover{
     color: #4831d4;
 }
 
+#about .fab{
+    font-size: 52px;
+}
+
+
 /* projects */
 
 #samples {
@@ -189,33 +198,76 @@ a:hover{
 
 .thumbnail-cont{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .thumbnail-cont h2{
     color: black;
 }
 
-.sample {
+.dev-proj {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.sample img{
-    width: 150px;
-    height: 150px;
-}
-
-.dev-proj, .writing-proj {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
     padding: 20px;
     margin-bottom: 30px;
-    flex-basis: 50%;
+    justify-content: space-between;
 }
+
+.dev-proj .sample{
+    flex-basis: 32%;
+}
+
+.dev-sample{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.dev-sample a{
+    color:#4831d4;
+}
+
+.dev-sample p{
+    font-size: 22px;
+}
+
+.sample {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+}
+
+.sample h3{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.sample img{
+    width: 250px;
+    height: 250px;
+}
+
+.proj-skills ul{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.proj-skills .fab{
+    font-size: 32px;
+}
+
 
 .box{
     width: 150px;
@@ -237,6 +289,7 @@ a:hover{
 .more-btn{
     border: 1px solid lightslategray;
     padding: 10px;
+    font-size: 24px;
 }
 
 .more-btn:hover{
@@ -245,18 +298,25 @@ a:hover{
     color: whitesmoke;
 }
 
+/* links to connect and to writing */
+
 #links,
 .link-list{
     display: flex;
-    /* background-color: darkslategray; */
 }
 
 #links{
     flex-direction: column;
 }
 
+
+#links section{
+    margin-top: 10px;
+}
+
 .link-list{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin-top: 25px;
@@ -273,6 +333,11 @@ a:hover{
     color: #4831d4;
 }
 
+.link-icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
 footer{
     background-color: whitesmoke;
@@ -281,7 +346,7 @@ footer{
 }
 
 
-@media only screen and (min-width: 275px) and (max-width: 799px) {
+@media only screen and (min-width: 275px) and (max-width: 759px) {
 
     h1, header {
         font-size: 36px;
@@ -382,7 +447,7 @@ footer{
 
 }
 
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 760px) {
     body{
         font-size: 18px;
     }
@@ -437,7 +502,7 @@ footer{
     }
 
     #home img{
-        width: 240px;
+        width: 350px;
         margin: 0 5%;
     }
 
@@ -466,7 +531,7 @@ footer{
 /* projects */
 
     .thumbnail-cont{
-        flex-direction: row;
+        flex-direction: column;
         margin-top: 2%;
         gap: 2%;
     }
@@ -477,10 +542,17 @@ footer{
         color: lightslategray
     }
 
+    .dev-sample{
+        width: 100%;
+    }
+
+    .dev-proj .sample{
+        flex-basis: 100%;
+    }
 /* links/socials */
 
     .link-list{
-        flex-direction: row;
+        flex-direction: column;
         /* background-color: red; */
         justify-content: center;
         align-items: center;
@@ -495,5 +567,11 @@ footer{
         /* margin-left: 15%; */
         width: 100%;
         font-size: 18px;
+    }
+}
+
+@media only screen and (min-width: 1250px) {
+    .dev-proj .sample{
+        flex-basis: 32%;
     }
 }
